@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>منصة اللغة العربية</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <header id="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-buttons">
+            <button>تسجيل الدخول</button>
+            <button>الدخول كضيف</button>
+        </div>
+        </header>
+
+        <!-- HERO -->
+        <div class="hero">
+        <div class="hero-content">
+            <h1>!مرحبا</h1>
+        <p>مرحباً بك في المعجم النقدي التفاعلي</p>
+            <div class="buttons">
+            <button onclick="openPanel(1)">لديك حساب</button>
+            <button onclick="openPanel(2)">انشاء حساب</button>
+            <button onclick="openPanel(3)">من نحن</button>
+            <button onclick="openPanel(4)">الدخول كضيف</button>
+            </div>
+        </div>
+        </div>
+
+        <!-- SLIDE PANELS -->
+        <div id="panel1" class="slide-panel">
+        <h2>لديك حساب</h2>
+            <div class="slide-buttons">
+                <button>تسجيل الدخول</button>
+                <button>انشاء حساب</button>
+            </div>
+        </div>
+
+        <div id="panel2" class="slide-panel">
+        <h2>انشاء حساب</h2>
+            <div class="slide-buttons">
+                <button>انشاء حساب</button>
+                <button>تسجيل الدخول</button>
+            </div>
+        </div>
+
+        <div id="panel3" class="slide-panel">
+        <h2>من نحن</h2>
+        
+        <div class="description">
+            <h2 class="description-title">التعريف بالموقع</h2>
+            <p>
+            المعجم النقدي التفاعلي هو مشروع رقمي يهدف إلى بناء قاعدة
+معرفية شاملة تجمع أبرز المصطلحات والمفاهيم النقدية في مجال الأدب والنقد، وتعرض            
+            بطريقة تفاعلية تمكّن المستخدم من البحث والمقارنة والاطلاع على الشروحات المتعددة
+            للمصطلح الواحد. كما يقدّم ترجمة دقيقة لهذه المصطلحات باللغتين الفرنسية والإنجليزية، لتيسير التواصل
+            المعرفي والانفتاح على الدراسات العالمية. يسعى المعجم إلى توضيح الفروق الدلالية بين المصطلحات،
+            والحد من فوضى الاصطلاح وتضارب المعاني في البحوث الأكاديمية، إضافةً إلى تعزيز الوعي النقدي لدى
+            الباحثين والطلبة، وتوفير أداة علمية دقيقة تواكب التحولات المعرفية الحديثة في الخطاب النقدي العربي
+            </p>
+        </div>
+        <div class="description">
+            <h2 class="description-title">التعريف بفريق العمل</h2>
+            <p class="description-words"><br><span class="team">محمد زبيش</span> متخصص في الدراسات الأدبية والنقدية وأيضاً متخصص في تلقين العلوم الشرعية</p>
+            <p class="description-words"><br><span class="team">نجوى لبازدة</span> متخصصة في الدراسات الأدبية والنقدية وأيضاً متخصصة في تسيير منشآت التربية والتعليم</p>
+            <p class="description-words"><br><span class="team">دليلة مختاري</span> متخصصة في الدراسات الأدبية والنقدية وأيضاً متخصصة ايضاً في تربية النشء</p>
+            <p class="description-words"><br><span class="team">رقية فلاحي</span> متخصصة في الدراسات الأدبية والنقدية</p>
+            <p class="description-words"><br><span class="team">قيرواني أحمد زين الدين </span>متخصص في الدراسات النقدية والدراسات القانونية والسياسية وتطوير المهارات العملية</p>
+        </div>
+        </div>
+
+        <div id="panel4" class="slide-panel">
+        <h2>الدخول كضيف</h2>
+        <div class="slide-buttons">
+                <button id="subTriggerBtn" onclick="toggleSubPanel()">المصطلحات</button>
+                <button onclick="openContent('pdfContent')">المحاضرات</button>
+                <button onclick="openContent('videosContent')">الملتقيات و الندوات</button>
+                <button onclick="openContent('podcastContent')">بودكاست</button>
+                <button>المقالات و المجلات</button>
+                <button onclick="openContent('textContent')">البرامج التكوينية</button>
+                <button onclick="openContent('lilbrary')">المكتبة الرقمية</button>
+                <button>مذكرات التخرج ورسائل الدكتوراه</button>
+                <button onclick="openContent('facebookContent')">المستجدات و الاصدارات</button>
+            </div>
+        </div>
+
+        <div id="subPanel">
+            <button class="subslide-buttons" onclick="openContent('old-mosta')">قديمة</button><br><br>
+            <button class="subslide-buttons" onclick="openContent('new-mosta')">حديثة</button><br><br>
+            <button class="subslide-buttons" onclick="openContent('modern-mosta')">معاصرة</button>
+        </div>
+
+        <div id="old-mosta" class="content-panel">
+            <a href="الطبع والصنعة عند القدامى.pdf" target="_blank" class="lecture">📄الطبع و الصنعة عند القدامى</a>
+        </div>
+
+        <div id="new-mosta" class="content-panel">
+            <a href="الرومانسية.pdf" target="_blank" class="lecture">📄الرومنسية</a>
+        </div>
+            
+        <div id="modern-mosta" class="content-panel">
+            <a href="السيميائية.pdf" target="_blank" class="lecture">📄السيميائية</a>
+        </div>
+
+            <!-- VIDEOS CONTENT -->
+            
+        <div id="videosContent" class="content-panel">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/bJCTPqYAp1o" frameborder="0" allowfullscreen></iframe>
+            <br><br>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/BLOHA1vYIWc" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- PDF LIST CONTENT -->
+        <div id="pdfContent" class="content-panel">
+            <a href="محاضرة رقم2.pdf" target="_blank" class="lecture">📄محاضرة رقم 1</a><br><br>
+            <a href="محاضرة رقم3.pdf" target="_blank" class="lecture">📄محاضرة رقم 2</a><br><br>
+        </div>
+
+        <!-- facebook CONTENT -->
+
+        <div id="facebookContent" class="content-panel">
+            <iframe 
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/865681423072706/&show_text=false&width=500" 
+                width="100%" 
+                height="300" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+        </div>
+
+        <!-- podcast CONTENT -->
+
+        <div id="podcastContent" class="content-panel">
+            <a href="podcast.mp4" width="100%" height="200" frameborder="0" allowfullscreen class="lecture">بودكاست الناقد</a>
+        </div>
+
+        <!-- TEXT CONTENT -->
+        <div id="textContent" class="content-panel1 content-panel">
+            <div class="dawarat">
+                <p class="dawarat-title"><br>ورة تكوينية بعنوان: منهجيات التحليل الأدبي (البنية ,الدلالة ,الخطاب)</p>
+                <p class="dawarat-title"><br>الأهداف</p>
+                <p class="dawarat-text"><br>التعرف على مفاهيم البنية والدلالة والخطاب</p>
+                <p class="dawarat-text"><br>اكتساب أدوات التحليل الأولية للنصوص الأدبية</p>
+                <p class="dawarat-text"><br>المحاور الأساسية</p>
+                <p class="dawarat-text"><br>مفهوم البنية والبنية العميقة</p>
+                <p class="dawarat-text"><br>الدلالة والسياق</p>
+                <p class="dawarat-text"><br>الخطاب ووظائفه</p>
+                <p class="dawarat-text"><br>مصطلحات مرافقة: بنية، دلالة، خطاب، سياق، وظيفة، مرجع، نسق</p>
+            </div>
+            <div class="dawarat">
+                <p class="dawarat-title"><br>دورةتكوينية بعنوان : تحليل الخطاب النقدي</p>
+                <p class="dawarat-title"><br>الأهداف</p>
+                <p class="dawarat-text"><br>فهم العلاقة بين الخطاب والسلطة والتمثيل</p>
+                <p class="dawarat-title"><br>المحاور</p>
+                <p class="dawarat-text"><br>الإيديولوجيا</p>
+                <p class="dawarat-text"><br>الهيمنة</p>
+                <p class="dawarat-text"><br>تحليل خطاب السلطة</p>
+                <p class="dawarat-text"><br>مصطلحات: إيديولوجيا، هيمنة، تمثيل، خطاب، تفكيك، سياقات السلطة</p>
+            </div>
+            <button class="subslide-buttons">التسجيل</button>
+        </div>
+
+        <!-- TEXT CONTENT -->
+         
+        <div id="lilbrary" class="content-panel">
+            <a href="إشكالية المصطلح .pdf" target="_blank" class="lecture">📄اشكالية المصطلح</a>
+        </div>
+
+        <!-- INFO SECTIONS -->
+        <section id="university">
+        <h2 class="site-description">التعريف بالموقع</h2>
+        <p class="web-description">
+            المعجم النقدي التفاعلي هو مشروع رقمي يهدف إلى بناء قاعدة معرفية
+            شاملة تجمع أبرز المصطلحات والمفاهيم النقدية في مجال الأدب والنقد، وتعرض 
+            بطريقة تفاعلية تمكّن المستخدم من البحث والمقارنة والاطلاع على الشروحات المتعددة للمصطلح الواحد.
+            كما يقدّم ترجمة دقيقة لهذه المصطلحات باللغتين الفرنسية والإنجليزية،
+            لتيسير التواصل المعرفي والانفتاح على الدراسات العالمية.
+            يسعى المعجم إلى توضيح الفروق الدلالية بين المصطلحات،
+            والحد من فوضى الاصطلاح وتضارب المعاني في البحوث الأكاديمية،
+            إضافةً إلى تعزيز الوعي النقدي لدى الباحثين والطلبة، وتوفير
+            أداة علمية دقيقة تواكب التحولات المعرفية الحديثة في الخطاب النقدي العربي.
+        </p>
+        </section>
+
+        <section id="major">
+        <h2 class="site-description">التعريف بفريق العمل</h2>
+        <div class="web-description">
+            <p class="description-words"><br><span class="team">محمد زبيش</span> متخصص في الدراسات الأدبية والنقدية وأيضاً متخصص في تلقين العلوم الشرعية</p>
+            <p class="description-words"><br><span class="team">نجوى لبازدة</span> متخصصة في الدراسات الأدبية والنقدية وأيضاً متخصصة في تسيير منشآت التربية والتعليم</p>
+            <p class="description-words"><br><span class="team">دليلة مختاري</span> متخصصة في الدراسات الأدبية والنقدية وأيضاً متخصصة ايضاً في تربية النشء</p>
+            <p class="description-words"><br><span class="team">رقية فلاحي</span> متخصصة في الدراسات الأدبية والنقدية</p>
+            <p class="description-words"><br><span class="team">قيرواني أحمد زين الدين </span>متخصص في الدراسات النقدية والدراسات القانونية والسياسية وتطوير المهارات العملية</p>
+        </div>
+        </section> 
+
+        <!-- FOOTER -->
+        <footer>
+        <div class="footer-details">
+           All Rights Are Reserved
+        </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
